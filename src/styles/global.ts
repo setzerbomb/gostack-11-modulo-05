@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import background from '../assets/img/background.svg';
 
 export default createGlobalStyle`
   * {
@@ -11,14 +12,19 @@ export default createGlobalStyle`
     min-height:100%;
   }
   body{
-    background: #000;
-    -webkit-font-smoothing: antialiased !important;
+    background: #f0f0f5 url(${background}) no-repeat 70% top;
+    -webkit-font-smoothing: antialiased;
   }
   body, input, button {
-    font-size: 14px;
+    font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
   }
   button {
     cursor: pointer;
+  }
+  #root {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
   }
 `;
